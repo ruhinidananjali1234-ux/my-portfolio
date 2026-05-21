@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhini D. Sammani | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>RDS Portfolio</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr> <section id="home">
+        <h1>Hi, I'm Ruhini D. Sammani </h1>
+        <h3>Data Science Undergraduate & IT diploma holder</h3>
+        <p>I build data-driven solutions and interactive web applications. Welcome to my digital space!</p>
+        
+        <img src="c:\Users\HP\Downloads\1779267459443.jpg" alt="Ruhini D. Sammani" style="border-radius: 50%;">
+        
+        <br><br>
+        <a href="https://drive.google.com/file/d/1KZkJaCaxZlIRGaLQlKBewRLpFPbdCiwN/view?usp=sharing" target="_blank"><button>Download My CV</button></a>
+    </section>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate <strong>Data Science Undergraduate</strong> at SLTC Research University and an <strong>IT Diploma Holder (Merit Pass)</strong>. 
+            With a strong foundation in software engineering, I have a proven track record of leadership, having served as the <strong>Head Prefect</strong> in school and the <strong>IT Batch Representative</strong> at university.
+        </p>
+        <p>
+            Beyond technology, I possess an entrepreneurial mindset with a deep interest in business management and creative writing, aiming to author my own books in the future. I love bridging the gap between leadership, data, and digital innovation.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project-container">
+            
+            <div class="project-card">
+                <h3>1. Canteen Management System</h3>
+                <p>A desktop application designed to streamline canteen operations, manage orders, and handle inventory efficiently.</p>
+                <p><strong>Tech Stack:</strong> VB.Net, Database Management</p>
+            </div>
+
+            <div class="project-card">
+                <h3>2. Personal Responsive Website</h3>
+                <p>My first personal web project built during the IT Diploma to demonstrate responsive layout design and clean code structure.</p>
+                <p><strong>Tech Stack:</strong> HTML5, CSS3</p>
+            </div>
+
+            <div class="project-card">
+                <h3>3. Advanced Portfolio Site</h3>
+                <p>A high-end professional digital portfolio designed with a modern dark theme to showcase my academic and leadership journey.</p>
+                <p><strong>Tech Stack:</strong> HTML5, CSS3, Modern Styling</p>
+            </div>
+
+        </div>
+    </section>
+    
+<section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a project in mind or want to connect? Drop me a message below!</p>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            
+            <input type="hidden" name="access_key" value="cf602d22-39dc-4398-9eb8-7d46db2aab77">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" placeholder="Your Message Here..." required></textarea>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    </section>
+    
+        <script>
+        // ෆෝම් එක Submit වෙද්දී සාර්ථකයි කියලා පොඩි Alert එකක් දාන්න විතරයි මේක තියෙන්නේ
+        document.querySelector('.contact-form').addEventListener('submit', function() {
+            let userName = document.getElementById('name').value;
+            alert('Thank you, ' + userName + '! Your message is being sent to Ruhini. 👍');
+        });
+    </script>
+    
+</body>
+</html>

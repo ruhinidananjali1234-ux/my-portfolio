@@ -1,0 +1,304 @@
+/* ==========================================
+   1. GLOBAL STYLES & VARIABLES (පිටුවේ පදනම)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* පසුබිම: Header එකට දාපු තද Slate/Charcoal පාට */
+    background-color: #1a252f; 
+    /* ප්‍රධාන අකුරු: Off-White/Light Silver (තද පසුබිමට ලස්සනට පේන්න) */
+    color: #e4e7eb; 
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. NAVIGATION BAR (මෙනු එක)
+   ========================================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    /* Navbar එක තවත් තද කළු/Slate පාටක් කරලා කැපී පේන්න හැදුවා */
+    background-color: #111a22; 
+    border-bottom: 2px solid #52b788; /* මින්ට් ග්‍රීන් පාටින් ලස්සන බෝඩර් එකක් */
+}
+
+nav h2 {
+    color: #52b788; /* RDS Portfolio එක මින්ට් ග්‍රීන් කළා */
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #ffffff; /* සුදු පාට ලින්ක්ස් */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* මවුස් එක උඩට ගියාම මින්ට් ග්‍රීන් වෙන්න */
+nav ul li a:hover {
+    color: #52b788; 
+}
+
+/* ==========================================
+   3. HERO SECTION (ප්‍රධාන හඳුන්වාදීම)
+   ========================================== */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px;
+    background-color: #1a252f; /* පිටුවේ පසුබිම් පාටමයි */
+}
+
+#home h1 {
+    font-size: 2.8rem;
+    color: #ffffff; /* පිරිසිදු සුදු පාට */
+    margin-bottom: 12px;
+}
+
+#home h3 {
+    font-size: 1.4rem;
+    color: #52b788; /* උපමාතෘකාව මින්ට් ග්‍රීන් කළා */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 650px;
+    color: #b0b9c1; /* කියවන්න ලේසි Soft Silver පාටක් */
+    margin-bottom: 35px;
+}
+
+/* PHOTO STYLING */
+#home img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid #52b788; /* ෆොටෝ එක වටේ බෝඩර් එක මින්ට් ග්‍රීන් කළා */
+    box-shadow: 0px 8px 25px rgba(82, 183, 136, 0.2); /* මින්ට් පාටින් ග්ලෝ (Glow) එකක් */
+}
+
+/* DOWNLOAD CV BUTTON */
+#home button {
+    background-color: #52b788; /* බටන් එක මින්ට් ග්‍රීන් */
+    color: #111a22; /* බටන් එක ඇතුළේ අකුරු තද Slate පාට (High Contrast) */
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(82, 183, 136, 0.3);
+}
+
+#home button:hover {
+    background-color: #ffffff; /* මවුස් එක ගියාම බටන් එක සුදු වෙනවා */
+    color: #111a22;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================
+   4. ABOUT ME SECTION
+   ========================================== */
+#about {
+    padding: 80px 10%;
+    background-color: #111a22; /* වෙනස් පෙනුමකට තද කළු/Slate පසුබිම */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #52b788; /* මින්ට් ග්‍රීන් ඉරක් */
+    margin: 10px auto 0 auto;
+}
+
+#about p {
+    font-size: 1.15rem;
+    color: #b0b9c1;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* HTML එකේ තියෙන strong ටැග් එක (Data Science / Merit Pass) මින්ට් පාටින් හයිලයිට් කිරිම */
+#about strong {
+    color: #52b788;
+    font-weight: 600;
+}
+
+/* ==========================================
+   5. MY PROJECTS SECTION
+   ========================================== */
+#projects {
+    padding: 80px 10%;
+    background-color: #1a252f;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#projects .project-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* INDIVIDUAL PROJECT CARD (ප්‍රොජෙක්ට් කාඩ්ස්) */
+.project-card {
+    background-color: #111a22; /* කාඩ් එක ඇතුළ තද පාට */
+    padding: 30px;
+    border-radius: 12px;
+    width: 360px;
+    border: 1px solid #2c3e50; /* සියුම් බෝඩර් එකක් */
+    transition: all 0.3s ease;
+}
+
+/* කාඩ් එක උඩට මවුස් එක ගෙනිච්චාම වෙනස් වන සුපිරිම පෙනුම */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #52b788; /* බෝඩර් එක මින්ට් ග්‍රීන් වෙනවා */
+    box-shadow: 0 12px 25px rgba(82, 183, 136, 0.15); /* මින්ට් ග්ලෝ එකක් එනවා */
+}
+
+.project-card h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    color: #b0b9c1;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Tech Stack කියන වචන ටික මින්ට් පාට කරන්න */
+.project-card strong {
+    color: #52b788;
+}
+/* ==========================================
+   6. CONTACT ME SECTION STYLING
+   ========================================== */
+#contact {
+    padding: 80px 10%;
+    background-color: #111a22; /* About Me එකේ වගේම තද Slate පසුබිම */
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#contact h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #52b788; /* මින්ට් ග්‍රීන් ඉරක් */
+    margin: 10px auto 0 auto;
+}
+
+#contact p {
+    color: #b0b9c1;
+    margin-bottom: 40px;
+}
+
+/* ෆෝම් එක මැදට ගෙන ඒම සහ පළල සකස් කිරීම */
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left; /* Input labels වම් පැත්තට කිරීම */
+    background-color: #1a252f; /* ෆෝම් එක ඇතුළත පසුබිම */
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #52b788; /* Labels ඔක්කොම මින්ට් ග්‍රීන් */
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Input boxes සහ Textarea ලස්සන කිරීම */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #111a22; /* පෙට්ටි ඇතුළත තද පාට */
+    border: 1px solid #2c3e50;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Input එකක් ක්ලික් කරලා ටයිප් කරද්දී වෙනස් වන විදිහ (Focus Effect) */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #52b788; /* ක්ලික් කළාම බෝඩර් එක මින්ට් වෙනවා */
+    box-shadow: 0 0 10px rgba(82, 183, 136, 0.2);
+}
+
+/* ෆෝම් එකේ තියෙන SEND MESSAGE BUTTON එක */
+.contact-form button {
+    width: 100%;
+    background-color: #52b788;
+    color: #111a22;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #ffffff;
+    color: #111a22;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
