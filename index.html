@@ -68,6 +68,365 @@
                     <button class="btn" style="background-color: #52b788; color: #111a22; font-weight: bold; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #52b788; display: inline-block;">Play Game 🚀</button>
                 </a>
             </div>
+            <div class="project-container-rds">
+    <style>
+        /* Mint, Black & White Premium Minimal Theme */
+        :root {
+            --bg-card-rds: #121212;
+            --text-primary-rds: #ffffff;
+            --text-secondary-rds: #a0a0a0;
+            --mint-accent-rds: #52b788;
+            --border-color-rds: #222222;
+        }
+
+        .project-card-rds {
+            background-color: var(--bg-card-rds);
+            border: 1px solid var(--border-color-rds);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .project-card-rds::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--mint-accent-rds);
+        }
+
+        .badge-rds {
+            background-color: rgba(82, 183, 136, 0.1);
+            color: var(--mint-accent-rds);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(82, 183, 136, 0.2);
+        }
+
+        .project-card-rds h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary-rds);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle-rds {
+            color: var(--text-secondary-rds);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .description-rds {
+            color: var(--text-secondary-rds);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Tech Stack Tags */
+        .tech-tags-rds {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .tag-rds {
+            background-color: #1a1a1a;
+            color: #dddddd;
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color-rds);
+            font-weight: 500;
+        }
+
+        /* Structural Java App Mockup UI */
+        .app-mockup-rds {
+            background-color: #0d0d0d;
+            border: 1px solid var(--border-color-rds);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .mockup-header-rds {
+            background-color: #161616;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color-rds);
+        }
+
+        .dots-rds {
+            display: flex;
+            gap: 0.4rem;
+            margin-right: 1rem;
+        }
+
+        .dot-rds {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-rds.red { background-color: #ff5f56; }
+        .dot-rds.yellow { background-color: #ffbd2e; }
+        .dot-rds.green { background-color: #27c93f; }
+
+        .mockup-title-rds {
+            font-size: 0.85rem;
+            color: var(--text-secondary-rds);
+            font-family: monospace;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .mockup-body-rds {
+            display: flex;
+            height: 340px;
+            background-color: #0f0f0f;
+        }
+
+        .mockup-sidebar-rds {
+            width: 180px;
+            background-color: #121212;
+            border-right: 1px solid var(--border-color-rds);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .sidebar-logo-rds {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--mint-accent-rds);
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #222;
+        }
+
+        .sidebar-item-rds {
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary-rds);
+            background-color: #181818;
+            border: 1px solid #252525;
+        }
+
+        .sidebar-item-rds.active {
+            background-color: rgba(82, 183, 136, 0.1);
+            color: var(--mint-accent-rds);
+            border: 1px solid rgba(82, 183, 136, 0.3);
+        }
+
+        .mockup-content-rds {
+            flex-grow: 1;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .content-header-rds {
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color-rds);
+            padding-bottom: 0.5rem;
+            color: var(--text-primary-rds);
+        }
+
+        .inner-layout-rds {
+            display: flex;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        .table-area-rds {
+            flex: 1.3;
+            background-color: #141414;
+            border: 1px solid var(--border-color-rds);
+            border-radius: 6px;
+            padding: 0.5rem;
+        }
+
+        .table-row-rds {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.4rem;
+            font-size: 0.75rem;
+            border-bottom: 1px solid #1f1f1f;
+            color: var(--text-secondary-rds);
+        }
+        .table-row-rds.head {
+            font-weight: 600;
+            color: var(--text-primary-rds);
+            border-bottom: 1px solid var(--border-color-rds);
+        }
+
+        .receipt-area-rds {
+            flex: 0.9;
+            background-color: #161616;
+            border: 1px dashed #333;
+            border-radius: 6px;
+            padding: 0.75rem;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        .receipt-line-rds {
+            margin-bottom: 0.2rem;
+        }
+        .receipt-accent-rds {
+            color: var(--mint-accent-rds);
+        }
+
+        .mockup-footer-rds {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #141414;
+            padding: 0.75rem 1rem;
+            border-top: 1px solid var(--border-color-rds);
+        }
+
+        .footer-total-rds {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--mint-accent-rds);
+        }
+
+        .mockup-btn-rds {
+            background-color: var(--mint-accent-rds);
+            color: #000000;
+            font-weight: 700;
+            padding: 0.4rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: none;
+        }
+
+        /* Actions buttons */
+        .action-container-rds {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary-rds {
+            background-color: var(--mint-accent-rds);
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary-rds:hover {
+            background-color: #40a074;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <div class="project-card-rds">
+        <span class="badge-rds">Featured Project</span>
+        <h1>RDS Canteen Management System</h1>
+        <p class="subtitle-rds">Desktop POS & Live Analytics Application</p>
+        
+        <p class="description-rds">
+            An advanced desktop point of sale (POS) solution custom-built to streamline daily canteen operations. 
+            Features an object-oriented architecture built in Java with a dynamically updating food matrix, interactive live billing structure with real-time receipt simulation, and automated administrative revenue counters.
+        </p>
+
+        <div class="tech-tags-rds">
+            <span class="tag-rds">Java Development</span>
+            <span class="tag-rds">Java Swing GUI</span>
+            <span class="tag-rds">AWT Graphics</span>
+            <span class="tag-rds">Object-Oriented Design (OOP)</span>
+            <span class="tag-rds">Data Structures & Arrays</span>
+        </div>
+
+        <div class="app-mockup-rds">
+            <div class="mockup-header-rds">
+                <div class="dots-rds">
+                    <div class="dot-rds red"></div>
+                    <div class="dot-rds yellow"></div>
+                    <div class="dot-rds green"></div>
+                </div>
+                <div class="mockup-title-rds">RDS-Canteen-Management-System / DashboardFrame.java</div>
+            </div>
+            <div class="mockup-body-rds">
+                <div class="mockup-sidebar-rds">
+                    <div class="sidebar-logo-rds">RDS CAFE</div>
+                    <div class="sidebar-item-rds active">🛒 Place Order</div>
+                    <div class="sidebar-item-rds">🍔 Manage Food</div>
+                    <div class="sidebar-item-rds">📊 Sales Reports</div>
+                </div>
+                <div class="mockup-content-rds">
+                    <div class="content-header-rds">📊 Place Customer Order</div>
+                    <div class="inner-layout-rds">
+                        <div class="table-area-rds">
+                            <div class="table-row-rds head">
+                                <span>Food Item Name</span>
+                                <span>Price</span>
+                            </div>
+                            <div class="table-row-rds">
+                                <span>Chicken Rice</span>
+                                <span>Rs. 450.00</span>
+                            </div>
+                            <div class="table-row-rds">
+                                <span>Kottu Roti</span>
+                                <span>Rs. 500.00</span>
+                            </div>
+                            <div class="table-row-rds">
+                                <span>Samosa</span>
+                                <span>Rs. 80.00</span>
+                            </div>
+                        </div>
+                        <div class="receipt-area-rds">
+                            <div class="receipt-line-rds" style="text-align: center; color:#fff;">✨ RDS CAFE ✨</div>
+                            <div class="receipt-line-rds">-------------------------</div>
+                            <div class="receipt-line-rds">Chicken Rice  x2  Rs.900.00</div>
+                            <div class="receipt-line-rds">Samosa        x1  Rs.80.00</div>
+                            <div class="receipt-line-rds">-------------------------</div>
+                            <div class="receipt-line-rds receipt-accent-rds">TOTAL DUE:    Rs.980.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mockup-footer-rds">
+                <div class="footer-total-rds">Live Session Total: Rs. 980.00</div>
+                <button class="mockup-btn-rds">Finish & Pay 💳</button>
+            </div>
+        </div>
+
+        <div class="action-container-rds">
+            <a href="https://github.com/ruhinidananjali1234-ux/RDS-Canteen-Management-System" target="_blank" class="btn-primary-rds">
+                View Source Code on GitHub 🚀
+            </a>
+        </div>
+    </div>
+</div>
             <div class="project-card">
                 <h3>1. Canteen Management System</h3>
                 <p>A desktop application designed to streamline canteen operations, manage orders, and handle inventory efficiently.</p>
